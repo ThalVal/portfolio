@@ -1,0 +1,291 @@
+:root {
+    --bleh: #438890;
+    --blah: #5D909E;
+    --bloh: #7C9CAE;
+    --hover: #BAE7C4;
+} 
+
+* {
+    box-sizing: border-box;
+    font-family: 'Garamond', 'Georgia', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+header {
+    background: #176D5B;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#circ-img { 
+    border-radius: 50%;
+    width: 250px;
+    position: absolute;
+    left: 20px;
+    top: 120px;
+    border: 2px solid #fff;
+}
+
+header .name {
+    margin: 10px;
+}
+
+header .name h1 {
+    font-size: 300%;
+    font-variant-caps: small-caps;
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    margin: 5px;
+}
+
+nav a {
+    color: #19394B;
+    font-size: 150%;
+    margin: 30px 5px 10px 0;
+    padding: 10px 10px 0px 10px;
+    text-decoration: none;
+}
+
+nav a:focus {
+    border-bottom: 3px solid #19394B;
+    outline: 0;
+}
+
+nav a:hover {
+    color: var(--hover);
+}
+
+
+.hero {
+    height: 349px;
+    width: 100%;
+    background-position:center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.side {
+    background-color: var(--bloh);
+    flex-shrink: 0;
+    width: 260px;
+}
+
+.side h2 {
+    align-self: flex-start;
+    background-color: var(--bloh);
+    text-align: right;
+    position: sticky;
+    top: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 5%;
+    padding: 15px 15px 55px 5px;
+}
+
+.about {
+    background-color: var(--blah);
+    display: flex;
+}
+
+.about section {
+    line-height: 4;
+    margin: 4% 6%;
+    text-indent: 40px;
+}
+
+.about p+p {
+    padding-top: 10px;
+}
+
+.work {
+    background: linear-gradient(#C7CACF, #2A7D78);
+    display: flex;
+}
+
+.workboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2% 5%;
+    width: 100%;
+}
+
+.card {
+    background-image: url('./images/la fume.jpg');
+    background-position: center;
+    background-size: 50%;
+    border: 10px solid #19394B;
+    margin: 10px 0;
+    width: 40%;
+    min-height: 200px;
+    height: 30vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    line-height: 1;
+    transition: all 1s;
+}
+
+.card#favorite {
+    background-image: no-repeat url("./images/la fume.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 45vh;
+    min-height: 300px;
+    width: 90%;
+}
+
+.card#a {
+    background-image: url("./images/harpy.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card#o {
+    background-image: url("./images/SOURIRE.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.card#i {
+    background-image: url("./images/MTG.jpg");
+    background-position: center top;
+    background-size: cover;
+}
+
+.card#u {
+    background-image: url("./images/Thaligator.jpg");
+    background-position: center;
+    background-size: cover
+}
+    
+
+.card section {
+    background-color: #19394B;
+    bottom: 20px;
+    color: white;
+    line-height: 2.2;
+    margin: 0 auto 0 0;
+    padding: 2px 25px 5px 5px;
+    position: relative;
+}
+
+.card h3{
+    font-size: 180%;
+}
+
+.card p {
+    font-style: italic;
+}
+
+.card:focus {
+    outline: 0;
+    border-color: #41888D;
+}
+
+.card:hover {
+    transition: all 0.5s;
+    transform: scale(1.05,1.05);
+    background-size: 100%;
+}
+
+.contact {
+    background-color: #438890;
+    display: flex;
+}
+
+.contact section {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact a {
+    font-size: 200%;
+    color: black;
+    border-bottom: 5px solid black;
+}
+
+.contact a:hover {
+    color: var(--hover)
+    ;
+}
+
+footer {
+    height: 100px;
+    background: #176D5B;
+    text-align: center;
+}
+
+footer p {
+    font-style: italic;
+    font-size: 100%;
+    padding: 30px 0;
+}
+
+
+@media screen and (max-width:992px) {
+    .side {
+        width: 180px;
+    }
+    header {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    nav,
+    nav a {
+        flex-direction: row;
+        margin: 0;
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .side {
+        width: 100%;
+    }
+    
+    .side h2 {
+        padding: 0;
+        border: 0;
+        margin: 0;
+        width: 80%;
+        text-align: left;
+        padding: 10px;
+        border-bottom: 5px solid black;
+        margin: 10px 10px 10px 10px;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    nav,
+    nav a {
+        flex-direction: row;
+        margin: 0;
+        align-items: center;
+        font-size: 100%
+    }
+
+    .about,
+    .work,
+    .contact {
+        flex-direction: column;
+    }
+}
