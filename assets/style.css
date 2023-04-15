@@ -166,6 +166,12 @@ nav a:hover {
     background-position: center;
     background-size: cover
 }
+
+.card#e {
+    background-image: url("./images/brewery\ foolery.jpg");
+    background-position: center;
+    background-size: cover;
+}
     
 
 .card section {
